@@ -1,0 +1,454 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
+}
+
+.image {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+.banner-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+  background-image: url("../images/mobile/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner-section > .contentbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3em;
+  padding: 1em;
+}
+.banner-section > .contentbox > .title {
+  color: #fff;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 768px) {
+  .banner-section {
+    background-image: url("../images/desktop/image-header.jpg");
+  }
+}
+
+.header-section {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2em;
+}
+@media only screen and (min-width: 600px) {
+  .header-section {
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .header-section > .nav-btn {
+    display: none;
+  }
+  .header-section > .primary-menu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.advertise-section > .contentbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em;
+}
+.advertise-section > .contentbox > .title {
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+.advertise-section > .contentbox > .description {
+  color: #818498;
+  text-align: center;
+}
+@media only screen and (min-width: 600px) {
+  .advertise-section > .contentbox {
+    max-width: 100%;
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+}
+@media only screen and (min-width: 728px) {
+  .advertise-section > .imagebox > picture > .image {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .advertise-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .advertise-section > .contentbox {
+    padding: 1.5em;
+  }
+  .advertise-section > .contentbox:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .advertise-section > .imagebox:nth-child(1) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .advertise-section > .contentbox {
+    padding: 1.5em 4em;
+  }
+}
+
+.photobox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  min-height: 100vh;
+  padding: 2em;
+}
+.photobox > .contentbox > .title {
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+.photobox > .contentbox > .description {
+  text-align: center;
+}
+.photobox.-graphic {
+  background: url("../images/mobile/image-graphic-design.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.photobox.-graphic > .contentbox > .title,
+.photobox.-graphic > .contentbox > .description {
+  color: #25564b;
+}
+.photobox.-photography {
+  background: url("../images/mobile/image-photography.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.photobox.-photography > .contentbox > .title,
+.photobox.-photography > .contentbox > .description {
+  color: #19536b;
+}
+@media only screen and (min-width: 600px) {
+  .photobox.-graphic > .contentbox, .photobox.-photography > .contentbox {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  .photobox.-graphic > .contentbox > .title, .photobox.-photography > .contentbox > .title {
+    color: #fff;
+  }
+  .photobox.-graphic > .contentbox > .description, .photobox.-photography > .contentbox > .description {
+    color: #fff;
+    opacity: 0.9;
+  }
+}
+
+.testimonial-section {
+  padding: 3em 2em;
+}
+.testimonial-section > .title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #818498;
+  margin-bottom: 1em;
+}
+@media only screen and (min-width: 600px) {
+  .testimonial-section {
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .testimonial-section {
+    padding: 3em 5em;
+  }
+}
+
+.card-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3em;
+}
+@media only screen and (min-width: 768px) {
+  .card-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+  }
+}
+
+.gallery-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media only screen and (min-width: 768px) {
+  .gallery-section {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer-section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3em 2em;
+  background-color: #458c7e;
+}
+.footer-section > .secondary-menu {
+  margin-top: 2em;
+}
+.footer-section > .social-menu {
+  margin-top: 3.5em;
+}
+
+.primary-menu {
+  position: absolute;
+  top: 5em;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5em;
+  width: 15em;
+  padding: 2em;
+  background-color: #fff;
+  box-shadow: 0px 7px 20px 0px grey;
+}
+.primary-menu > .list > .link {
+  color: #818498;
+  text-decoration: none;
+}
+.primary-menu.-active {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media only screen and (min-width: 768px) {
+  .primary-menu {
+    all: unset;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1em;
+  }
+  .primary-menu > .list > .link:not(.active-btn) {
+    color: #fff;
+  }
+}
+
+.testimonial-card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5em;
+}
+.testimonial-card > .avatarbox {
+  width: 3em;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.testimonial-card > .description {
+  text-align: center;
+  color: #818498;
+}
+.testimonial-card > .authorbox > .name,
+.testimonial-card > .authorbox > .role {
+  display: block;
+  text-align: center;
+}
+.testimonial-card > .authorbox > .name {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.secondary-menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2.5em;
+}
+.secondary-menu > .list > .link {
+  color: #25564b;
+  text-decoration: none;
+}
+
+.social-menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1.5em;
+  padding: 0 2.5em;
+}
+.social-menu > .list > .link {
+  color: #25564b;
+}
+
+.readmore-link {
+  position: relative;
+  display: inline-block;
+  padding: 0.5em;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.readmore-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0.5em;
+  left: 0;
+  z-index: -1;
+  height: 0.5em;
+  width: 100%;
+  background-color: #fe7867;
+}
+.readmore-link:hover {
+  color: grey;
+}
+
+.nav-btn {
+  all: unset;
+  cursor: pointer;
+}
+
+.active-btn {
+  display: inline-block;
+  background-color: #fad400;
+  color: #000;
+  padding: 0.5em 1em;
+  border-radius: 5em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+@media only screen and (min-width: 768px) {
+  .active-btn {
+    background-color: #fff;
+    color: #000;
+  }
+}

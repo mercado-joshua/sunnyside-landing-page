@@ -1,0 +1,10 @@
+.secondary-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5em;
+
+    > .list > .link {
+        color: hsl(167, 40%, 24%);
+        text-decoration: none;
+    }
+}

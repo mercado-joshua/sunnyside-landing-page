@@ -1,0 +1,129 @@
+.advertise-section {
+    > .contentbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2em;
+
+        > .title {
+            font-weight: bold;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1em;
+        }
+
+        > .description {
+            color: hsl(232, 10%, 55%);
+            text-align: center;
+        }
+    }
+
+    
+    /// Small devices (portrait tablets and large phones, 600px and up)
+    @media only screen and (min-width: 600px) {
+        > .contentbox {
+            max-width: 100%;
+            padding-left: 4em;
+            padding-right: 4em;
+        }
+    }
+
+    @media only screen and (min-width: 728px) {
+        > .imagebox > picture > .image {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        > .contentbox {
+            padding: 1.5em;
+        }
+
+        > .contentbox:nth-child(1) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+
+        > .imagebox:nth-child(1) {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+    }
+
+    @media only screen and (min-width: 992px) {
+        > .contentbox {
+            padding: 1.5em 4em;
+        }
+    }
+}
+
+.photobox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 100vh;
+    padding: 2em;
+
+    > .contentbox {
+        > .title {
+            font-weight: bold;
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1em;
+        }
+
+        > .description {
+            text-align: center;
+        }
+    }
+
+    &.-graphic {
+        background: url("../../images/mobile/image-graphic-design.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        & > .contentbox {
+            > .title,
+            > .description {
+                color: hsl(167, 40%, 24%);
+            }
+        }
+    }
+
+    &.-photography {
+        background: url("../../images/mobile/image-photography.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        & > .contentbox {
+            > .title,
+            > .description {
+                color: hsl(198, 62%, 26%)
+            }
+        }
+    }
+
+    /// Small devices (portrait tablets and large phones, 600px and up)
+    @media only screen and (min-width: 600px) {
+        &.-graphic,
+        &.-photography {
+            & > .contentbox {
+                padding-left: 2em;
+                padding-right: 2em;
+
+                > .title {
+                    color: #fff;
+                }
+
+                > .description {
+                    color: #fff;
+                    opacity: .9;
+                }
+            }
+        }
+    }
+}

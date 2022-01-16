@@ -1,0 +1,35 @@
+.testimonial-section {
+    padding: 3em 2em;
+
+    > .title {
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        color: hsl(232, 10%, 55%);
+        margin-bottom: 1em;
+    }
+
+    
+    /// Small devices (portrait tablets and large phones, 600px and up)
+    @media only screen and (min-width: 600px) {
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+
+    @media only screen and (min-width: 768px) {
+        padding: 3em 5em;
+    }
+}
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+
+    @media only screen and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2em;
+    }
+}
